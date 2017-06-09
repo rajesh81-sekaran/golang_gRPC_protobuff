@@ -1,0 +1,15 @@
+syntax="proto3";
+package cbuf;
+
+service Conversion {
+    rpc IntegerToString(Integer) returns(String) {}
+    rpc StringToInteger(String) returns(Integer) {}
+}
+
+message Integer {
+    int32 integer = 1;
+}
+
+message String {
+    string str = 1;
+}
